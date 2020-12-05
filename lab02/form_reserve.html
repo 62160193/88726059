@@ -6,51 +6,82 @@
  <title>Hotel Booking</title>
 </head>
 <body>
- <h3>Form Demo</h3>
+ <h3>Hotel Booking</h3>
+ <table>
  <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
-    <label for="xf">Room Type</label>
-    <select name="xf">
-    <option value="0">Please Select</option>
-    <option value="Standard">Standard</option>
-    <option value="Luxery">Luxery</option>
-    <option value="Deluxe">Deluxe</option>
-    </select>
- <br><br>
- <label for="emotion">Number of Guest</label>
-    <select name="emotion">
+<tr><td><label for="roomtype">Room Type</label></td>
+<td colspan="2"><select name="roomtype"style="width:100%">
+ <option value="0">Please Select</option>
+ <option value="Standard">Standard</option>
+ <option value="Luxury">Luxury</option>
+ <option value="Deluxe">Deluxe</option>
+</tr>
+
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+<tr>
+   <td><label for="numofguest">Number of guest</label></td>
+      <td colspan="2"><select name="numofguest"style="width:100%">
     <option value="0">Please Select</option>
     <option value="1-2">1-2</option>
     <option value="3-4">3-4</option>
     <option value="5-6">5-6</option>
     <option value="7-8">7-8</option>
-    </select>
- <br><br>
- <label for="name">ชื่อ :</label><br>
- <input type="text" name="name" id="name">
- <br><br>
- <label for="sex">เพศ:</label>
- <input type="radio" name="sex" id="sex" value="M">ชาย
- <input type="radio" name="sex" id="sex" value="F">หญิง
- <br><br>
- <label for="choice">งานอดิเรก:</label>
- <input type="checkbox" name="choice1" id="choice1" value="1">ดูหนัง
- <input type="checkbox" name="choice2" id="choice2" value="2">ฟังเพลง
- <input type="checkbox" name="choice3" id="choice3" value="3">เล่นเกม
- <br><br>
- <label for="emotion">ความรู้สึกตอนนี้</label>
- <select name="emotion">
- <option value="0">--Select one--</option>
- <option value="1">Happy</option>
- <option value="2">Sad</option>
- <option value="3">Fun</option>
- </select>
- <br><br>
- ข้อเสนอแนะ:<br>
- <Textarea name="commmet" id="comment" rows="5" cols="50"></Textarea>
- <br><br>
- <input type="submit" value="Send">
- <input type="reset" value="Clear">
- </form>
+ </td></select>
+   </tr>
+
+   <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>   
+   
+   <tr>
+   <td><label for="fname" for="lname">Name</label></td>
+<td><input type="text" placeholder = "First" name="fname" id="fname">
+<input type="text" placeholder = "Last" name="lname" id="lname"></td></tr>
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+<tr>
+<td colspan="1"><label for="email">Email</label></td>
+<td><input type="text" size = "46" placeholder = "john@company.com" name="email" id="email"></td></tr>
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+<tr>
+<td colspan="1"><label for="arrivaldate" for="arrivaltime">Arrival</label></td>
+<td><input type="date" size = "14" placeholder="MM / DD / YYYY" name = "arrivaldate" id = "arrivaldate">
+<input type="time" size = "14" placeholder="HH / MM" name = "arrivaltime" id = "arrivaltime"></td>
+</tr>
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+<tr>
+<td colspan="1"><label for="departuredate" for="departuretime">Departure</label></td>
+   <td><input type="date" size = "14" placeholder="MM / DD / YYYY" name = "departuredate" id = "departuredate">
+   <input type="time" size = "14" placeholder="HH / MM" name = "departuretime" id = "departuretime"></td>
+   </tr>
+
+   <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+   
+   <tr>
+<td colspan="1"><label for="pickup">Free Pickup</label></td>
+<td><input type="radio" name="pickup" id="pickup" value="Yes">Yes, Sure!<br>
+<input type="radio" name="pickup" id="pickup" value="No">No, I already rented car.</td>
+</tr>
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+<td colspan="1"><label for="flightnum">Flight Number</label></td>
+<td><input type="text" size = "46" placeholder = "C1209" name="flightnum" id="flightnum"></td></tr>
+
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+
+<tr>
+<td colspan="1"><label for="flightnum">Other requests</label></td>
+<td><Textarea name="otherreq" id="otherreq" rows="5" cols="48"></Textarea></td>
+</tr>
+
+
+
+<tr><td></td><td><input type="submit" value="Complete Reservation"></td></tr>
+</form>
 </table>
-</body>
-</html>
