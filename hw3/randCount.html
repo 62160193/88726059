@@ -1,0 +1,57 @@
+    <!doctype html>
+    <h2 style="color:red;">5.โปรแกรมสุ่มตัวเลข</h2>
+    <head>
+    <style>
+        table, td {
+        border: 1px solid black;
+        }
+    </style>
+    </head>
+    <script>
+
+    function guess(){
+        
+        var a = document.getElementById("count").value;
+        var x = [a];
+        var y = [a];
+        var z = 0;
+        z++;
+    for (var i = 0; i<a; i++){
+        y[i]=1;
+    }
+    for (var i = 0; i<a; i++){
+        rn = Math.floor(Math.random() * 100);
+        x[i] = rn;   
+        
+    }
+    for (var i = 0; i<a; i++){
+        for(var c = 0; c<a; c++)
+        if(c!=i)
+        if(x[i]==x[c])y[i]++;x[c]=0;}
+
+    for (var i = 0; i<a; i++){ 
+        var table = document.getElementById("myTable");
+                    var row = table.insertRow(i);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    
+
+                    cell1.innerHTML = x[i],
+                    cell2.innerHTML = y[i];
+                
+    }
+        
+    }
+
+
+
+    </script>
+    <body>
+
+    <input type="number" placeholder="จำนวนครั้ง" id="count" >
+    <button onclick="guess();ct()" >สุ่ม</button>
+    <br>
+    <table id="myTable" cellpadding="2" cellspacing="2" border="1" ></table>
+    <p id="showa"></p>
+    <p id="showb"></p>
+    </body>
