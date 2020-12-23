@@ -1,35 +1,35 @@
-<!DOCTYPE html>
-<head>
-
-</head>
-
-<body>
-
-    <h1>Random Number(0-100)</h1>
-    <input type="text" id="gnum"></input>
-    <br><br>
-    <button onclick="myFunction()">Submit</button>
-    <p id="demo"></p>
 <script>
-    //alert("Hello")
     rn = Math.floor(Math.random() * 100);
-    max ="มากไป"
-    min ="น้อยไป"
-    equal ="ถูกต้อง"
-    document.write(rn);
-    rb="d"
-   
-    function myFunction(){
-        var x =document.getElementById("gnum").value;
-        document.getElementById("demo").innerHTML =x;
+    function sOver(){
+        //window.location.reload();
+        rn = Math.floor(Math.random() * 100);
+        document.getElementById('showGuessNumber').innerHTML =" ";
+        document.getElementById('showGuessResult').innerHTML =" ";
+        }
     
-    }
-    if(x > rn) (document.write(rb))
+    function guess(n){
+        document.getElementById('showGuessNumber').innerHTML += n+" ";}
+
+    function reguess(n){
+        if(n<rn)
+            document.getElementById('showGuessResult').innerHTML ="น้อยกว่านี้!";
+        else if(n>rn)
+            document.getElementById('showGuessResult').innerHTML ="มากกว่านี้นะ!";
+        else
+            document.getElementById('showGuessResult').innerHTML ="ถูกต้องแล้วจ้า!";}
+
     
+
 </script>
-        
+<h1 style="color:blue;">Random Number 0-99</h1>
 
-</body>
+<br><br>
+
+<input type="text" placeholder="?" id="gn"></br><br>
+<button onclick="guess(gn.value); reguess(gn.value)">Guess</button></br>
+
+<p id="showGuessNumber"></p><br>
+<p id="showGuessResult"></p>
 
 
-
+<button onclick="sOver()">Start Over</button></br>
