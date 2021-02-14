@@ -1,0 +1,17 @@
+body {
+    font-family: Tahoma;
+    font-size: 12px ;
+    background-image: url(tqw.jpg);
+    color:white;
+}
+
+a {
+    color:lime;
+    font-size: 30px;
+}
+h {
+    color:yellow;
+    font-size: 40px;
+}
+
+    

@@ -1,0 +1,45 @@
+<h4>Search</h4>
+
+<style>
+    body {
+      background-image: url('https://sv1.picz.in.th/images/2021/02/14/oRl4ID.jpg');
+      background-size: 100% 100%;
+    }
+    </style>
+<body>
+<input type="text" id="kw">
+<button onclick="search()">Search</button>
+
+
+<form method="post" action="search_post2.php">
+    <input type="submit" value="Advance Search">
+</form>
+<div id="disp"></div>
+
+<script>
+    function search(){
+        kw = document.getElementById('kw').value;
+        //alert(kw);
+        console.log("kw=" +kw);
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            if (this.readyState == 4 && this.status == 200) {
+                //document.getElementById('disp').innerHTML = this.responseText;
+                arr = JSON.parse(this.responseText);
+                console.log(arr);
+                if(arr.length == 0){
+                    document.getElementById('disp').innerHTML = "Not found";
+                } else {
+                    html ="";
+                    for (i = 0; i < arr.length; i++) {
+                        html += arr[i].Artist_name +", "+ arr[i].Album_name  +"<br>";
+                    }
+                    document.getElementById('disp').innerHTML = html;
+                }
+            }
+        }
+        xmlhttp.open("get", "search.php?kw=" + kw);
+        xmlhttp.send();
+    }
+</script>
+</body>

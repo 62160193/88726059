@@ -1,0 +1,77 @@
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <h>ใช้ตัวเลขที่ให้มา 4 ตัวคิดคำนวณ บวก ลบ คูณ หาร ให้ได้คำตอบที่กำหนด 2 หลัก ภายใน 30 วินาที<hr></h><br>
+    <p id="number"></p>
+    <x id="number2"></x>
+    <y id="number3"></y>
+    <z id="number4"></z>
+    <c id="number5"></c>
+ <br><button id ="a" onclick="random1()",> GetNumber</button>   
+    <br><br><button id ="b" onclick="random2()",> GetAnswer</button>     <br><br>
+    
+
+<button onclick="setTimeout(myFunction, 30000);"> จับเวลา</button><br><br><br>
+
+<a href="main.html">หน้าหลัก</a>
+
+</body>
+
+
+    <script>
+        function random1() {
+        
+    document.getElementById("number2").innerHTML = Math.floor(Math.random() * 10);
+    document.getElementById("number3").innerHTML = Math.floor(Math.random() * 10);
+    document.getElementById("number4").innerHTML = Math.floor(Math.random() * 10);
+    document.getElementById("number5").innerHTML = Math.floor(Math.random() * 10);
+    }
+    </script>
+<script>
+
+function random2() {
+    
+document.getElementById("number").innerHTML = Math.floor(Math.random() * 100);
+
+                    }
+
+</script>
+<script>
+    function myFunction() {
+        
+        alert('หมดเวลาแล้ว');
+      
+    }
+    </script>
+<style>
+
+    #number{
+        font-size:40px
+    }
+    #number2{
+        font-size:30px
+    }
+    #number3{
+        font-size:30px
+    }
+    #number4{
+        font-size:30px
+    }
+    #number5{
+        font-size:30px
+    }
+   #a{
+        width:90;
+        height: 55px;
+    }
+
+    #b{
+        width:90;
+        height: 55px;
+    }
+    s{
+        font-size: 18px;
+        font-family:Tahoma;
+    }
+    
+</style>
+

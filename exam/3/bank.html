@@ -1,0 +1,34 @@
+<head>
+
+    </head>
+<body>
+    <input type= "text" id="int">
+    <button type= "submit" onclick="cal(int.value)">Convert</button>
+    <hr><div id="a">  </div>
+ </body>
+ 
+ <script>
+ function cal(num){
+    n = num;
+var q ="";
+        q = Math.floor(n/1000);n=n%1000
+        w = Math.floor(n/500);n=n%500
+        e = Math.floor(n/100);n=n%100
+        r = Math.floor(n/50);n=n%50
+        t = Math.floor(n/20);n=n%20
+        y = Math.floor(n/10);n=n%10
+        u = Math.floor(n/5);n=n%5
+        i = Math.floor(n/2);n=n%2
+        o = Math.floor(n/1);n=n%1
+
+document.getElementById("a").innerHTML = "แบ๊ง 1000 บาท :"+q+" ใบ<br>";
+document.getElementById("a").innerHTML = "แบ๊ง 500 บาท :"+q+" ใบ<br>";
+document.getElementById("a").innerHTML = "แบ๊ง 100 บาท :"+q+" ใบ<br>";
+document.getElementById("a").innerHTML = "แบ๊ง 50 บาท :"+q+" ใบ<br>";
+document.getElementById("a").innerHTML = "แบ๊ง 20 บาท :"+q+" ใบ<br>";
+document.getElementById("a").innerHTML = "เหรียญ 10 บาท :"+q+" เหรียญ<br>";
+document.getElementById("a").innerHTML = "เหรียญ 5 บาท :"+q+" เหรียญ<br>";
+document.getElementById("a").innerHTML = "เหรียญ 2 บาท :"+q+" เหรียญ<br>";
+document.getElementById("a").innerHTML = "เหรียญ 1 บาท :"+q+" เหรียญ<br>";
+
+</script>
